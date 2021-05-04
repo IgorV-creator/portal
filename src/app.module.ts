@@ -18,9 +18,9 @@ import * as path from 'path';
         ConfigModule.forRoot({
             envFilePath: `.${process.env.NODE_ENV}.env`
         }),
-        ServeStaticModule.forRoot({
-            rootPath: path.resolve( __dirname, 'static'),
-        }),
+        // ServeStaticModule.forRoot({
+        //     rootPath: path.resolve( __dirname, 'static'),
+        // }),
         //Устанавливаем связь с БД
         SequelizeModule.forRoot({
             dialect: 'postgres',
