@@ -1,0 +1,9 @@
+Создание постов - http://127.0.0.1:4000/posts
+Получение списка юзеров -http://localhost:5000/users
+Создание юзера --http://localhost:5000/users (POST)
+Регистрация юзера -http://localhost:5000/auth/registration
+Авторизация юзера - http://localhost:5000/auth/login
+Создание ролей - http://localhost:5000/roles
+Чтение ролей http://localhost:5000/roles/(ADMIN или USER)
+Назначение ролей (только от Админа) -http://localhost:5000/users/role
+Бан (только Админ) -http://localhost:5000/users/ban
