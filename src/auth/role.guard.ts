@@ -20,21 +20,23 @@ export class RoletGuard implements CanActivate {
             ])
 
             if(!requireRoles) {
+                //Если на endpoint ролей не назначено, доступно всем
                 return true
             }
+
             const req = context.switchToHttp().getRequest();
             const authHeader = req.headers.authorization;
             const [bearer, token] = authHeader.split(' ');
 
             if (bearer !== 'Bearer' || !token){
-                throw new UnauthorizedException( {message: 'Пользователь не авторизован'})
+                throw new UnauthorizedException({message: 'Пользователь не авторизован'})
             }
             const user = this.JwtService.verify(token);
             req.user = user;
             //true acsses
             return user.roles.some(role => requireRoles.includes(role.value))
         } catch(e) {
-            throw new HttpException('Нет доступа',HttpStatus.FORBIDDEN)
+            throw new HttpException('Нет доступа', HttpStatus.FORBIDDEN)
         }
     }
 }

@@ -16,9 +16,7 @@ export class UserService {
     //создаем пользователей и передаем объект dto для обмена данными с БД (создание Пользователя)
     createUser = async(dto: CreateUserDto) => {
         const user = await this.userRepository.create(dto)
-        const role = await this.roleService.getRoleBayValue('ADMIN')
-        console.log('*** ',role);
-        console.log('### ',user.id);
+        const role = await this.roleService.getRoleByValue('USER');
        //добавляем роль в БД
         await user.$set('roles', [role.id]);
          //Присвоим роль пользователю
@@ -30,11 +28,11 @@ export class UserService {
     getAllUser = async() => await this.userRepository.findAll({include: { all: true }});
 
     // получаем пользователя по email
-    getUsersBayEmail = async(email: string) => await this.userRepository.findOne({where: { email }, include:{ all: true }});
+    getUsersByEmail = async(email: string) => await this.userRepository.findOne({where: { email }, include:{ all: true }});
 
     addRole = async(dto:AddRoleDto) => {
         const user = await this.userRepository.findByPk(dto.userId);
-        const role = await this.roleService.getRoleBayValue(dto.value);
+        const role = await this.roleService.getRoleByValue(dto.value);
         if(role && user){
             await user.$add('role', role.id)
             return dto

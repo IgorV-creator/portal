@@ -18,7 +18,7 @@ export class Role extends Model<Role, RoleCreateAttrs> {
     @Column({type: DataType.INTEGER, unique: true, autoIncrement: true, primaryKey: true})
         id: number;
 
-    @ApiProperty({example: 'ADMIN', description: 'User roles'})
+    @ApiProperty({example: 'ADMIN', description: 'Роль Пользователя'})
     @Column({type: DataType.STRING, unique: true, allowNull: false})
         value: string;
 

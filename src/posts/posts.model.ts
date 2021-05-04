@@ -7,7 +7,7 @@ export interface PostCreateAttrs {
     title: string;
     content: string;
     userId: number;
-    image: string;
+    image?: string;
 }
 
 @Table({
@@ -28,6 +28,7 @@ export class Post extends Model<Post, PostCreateAttrs> {
         content: string;
 
     @ApiProperty({example: 'UserId'})
+    //Указываем на какое поле ссылается
     @ForeignKey(() => User)
     @Column({type: DataType.INTEGER})
         userId: number;
@@ -35,7 +36,7 @@ export class Post extends Model<Post, PostCreateAttrs> {
     @Column({type: DataType.STRING})
         image: string;
 
-    //устанавливаем связи
+    //устанавливаем связи один ко многим
     @BelongsTo(() => User)
         author: User
 }

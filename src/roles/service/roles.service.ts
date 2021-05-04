@@ -9,5 +9,5 @@ export class RolesService {
 
     createRole = async(dto: CreateRoleDto) => await this.roleRepository.create(dto);
 
-    getRoleBayValue = async(value: string) => await this.roleRepository.findOne({where: { value }});
+    getRoleByValue = async(value: string) => await this.roleRepository.findOne({where: { value }});
 }

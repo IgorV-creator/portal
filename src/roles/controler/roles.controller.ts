@@ -13,6 +13,6 @@ export class RolesController {
 
     @Get('/:value')
     getBayValue(@Param('value') value:string) {
-        return this.roleService.getRoleBayValue(value);
+        return this.roleService.getRoleByValue(value);
     }
 }

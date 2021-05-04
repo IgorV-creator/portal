@@ -17,7 +17,8 @@ async function start() {
     const documentation = SwaggerModule.createDocument(app, config);
     SwaggerModule.setup('/api/docs', app, documentation);
 
-    app.useGlobalPipes(new ValidatePipe())
+    //устанавливаем глобальную валидацию
+    app.useGlobalPipes(new ValidatePipe());
 
     await app.listen(PORT, ()=>console.log('listen port =', PORT));
 }

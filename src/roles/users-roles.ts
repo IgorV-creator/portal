@@ -10,6 +10,7 @@ import { Role } from "./roles.model";
     updatedAt: false
 })
 export class UsersRoles extends Model<UsersRoles> {
+
     @Column({type: DataType.INTEGER, unique: true, autoIncrement: true, primaryKey: true})
         id: number;
 
