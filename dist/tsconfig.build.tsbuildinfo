@@ -3717,8 +3717,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@babel/types/lib/index.d.ts": {
-        "version": "b668b7fb7c52a05fb9233a27ba5099a73cd8e157b037d67399336635495ab483",
-        "signature": "b668b7fb7c52a05fb9233a27ba5099a73cd8e157b037d67399336635495ab483",
+        "version": "4606c6d854002b409744140a996a49c4a607c1eb0396855529836161892abef5",
+        "signature": "4606c6d854002b409744140a996a49c4a607c1eb0396855529836161892abef5",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/babel__generator/index.d.ts": {
@@ -3727,8 +3727,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@babel/parser/typings/babel-parser.d.ts": {
-        "version": "069733dc220affbe58d9c1d1a93af3707bc515aaed761701d8741b57da4cb964",
-        "signature": "069733dc220affbe58d9c1d1a93af3707bc515aaed761701d8741b57da4cb964",
+        "version": "3e6297bcddf37e373d40ddb4c2b9e6fc98901b2a44c01b2d96af142874973c43",
+        "signature": "3e6297bcddf37e373d40ddb4c2b9e6fc98901b2a44c01b2d96af142874973c43",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/babel__template/index.d.ts": {
@@ -3987,8 +3987,8 @@
         "affectsGlobalScope": false
       },
       "../node_modules/@types/superagent/index.d.ts": {
-        "version": "022bb15c2fb40bb465a4511476b1796b9977e2bab463ffd8b2b3d1d1a56b00d1",
-        "signature": "022bb15c2fb40bb465a4511476b1796b9977e2bab463ffd8b2b3d1d1a56b00d1",
+        "version": "5ea07f5b82ba98f3d53bef789553b6a87294097caf758de104ea7d476d6a8385",
+        "signature": "5ea07f5b82ba98f3d53bef789553b6a87294097caf758de104ea7d476d6a8385",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/supertest/index.d.ts": {
